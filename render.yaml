@@ -1,0 +1,18 @@
+# Exported from Render on 2024-04-26T20:13:59Z
+services:
+- type: web
+  name: linreg-pytorch
+  runtime: python
+  repo: https://github.com/peterruler/linreg-pytorch
+  branch: main
+  env: python
+  plan: free
+  envVars:
+  - key: PORT
+    sync: false
+  - key: PYTHON_VERSION
+    sync: false
+  region: frankfurt
+  buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+  startCommand: python app.py
+version: "1"

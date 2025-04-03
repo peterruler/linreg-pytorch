@@ -1,0 +1,13 @@
+<h1>FLASK APP RUNNING</h1>
+<h2>Please enter your features below:</h2>
+<form  method="POST">
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+    {{ form.feat1.label }} {{form.feat1}}
+    <br>
+    {{ form.feat2.label}} {{form.feat2}}
+    <br>
+    {{ form.submit() }}
+</form>
+[[998,1000]]
+array([[419.67465]], dtype=float32)

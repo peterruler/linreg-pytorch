@@ -1,6 +1,80 @@
 # linreg-pytorch
 Linear Regression with pytorch with numerical scalar target value
 
+# create a environment
+
+```
+conda create --name torch31111 python=3.11.11
+```
+
+# activate the environment
+
+```
+conda activate torch31111
+```
+
+# install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+# install dependencies manually (optional)
+
+```
+conda install -y flask
+conda install -y Flask-WTF
+conda install -y joblib
+conda install -y scikit-learn
+pip install scikit-learn==1.6.1
+conda install -y scipy
+conda install -y werkzeug
+conda install -y pandas
+conda install -y numpy
+conda install -y seaborn
+conda install -y matplotlib
+conda install -y pickle
+conda install -y pytorch torchvision torchaudio cpuonly -c pytorch
+conda install -y sklearn
+```
+
+# run flask server
+
+```
+python app.py
+```
+
+# call in a webbrowser
+
+```
+http://localhost:5000
+```
+
+# deploying the Application on Render.com
+
+1. Fork this repository on GitHub.
+2. Connect the GitHub repository to Render.com (sign in with your GitHub account).
+3. Choose the free plan (0$) and the type "Web Service".
+4. Build the application on Render.com:
+```
+pip install --upgrade pip && pip install -r requirements.txt
+```
+
+# set Start Command on Render.com
+
+```
+python app.py
+```
+
+# set Environment Variables on Render.com
+
+```
+PYTHON_VERSION => 3.11.11
+PORT => 5000
+```
+
+# Explanation of the code (in Deutsch / German)
+
 1. Importierte Bibliotheken
 Datenverarbeitung und Visualisierung:
 
