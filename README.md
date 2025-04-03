@@ -135,6 +135,7 @@ Aufteilung:
 Mit train_test_split wird das Dataset in Trainings- und Testdaten (70:30-Verhältnis) unterteilt.
 
 2.3. Normalisierung der Features
+
 MinMaxScaler:
 Nur die Eingabefeatures werden skaliert (nicht die Zielvariable). Dadurch werden die Werte in einen Bereich zwischen 0 und 1 transformiert:
 
