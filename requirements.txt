@@ -1,4 +1,4 @@
-blinker @ file:///home/conda/feedstock_root/build_artifacts/blinker_1731096409132/work
+blinker==1.9.0
 Brotli @ file:///Users/runner/miniforge3/conda-bld/brotli-split_1725267563793/work
 certifi @ file:///home/conda/feedstock_root/build_artifacts/certifi_1739515848642/work/certifi
 cffi @ file:///Users/runner/miniforge3/conda-bld/cffi_1725560551097/work

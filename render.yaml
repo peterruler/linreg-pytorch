@@ -11,6 +11,7 @@ services:
   - key: PORT
     sync: false
   - key: PYTHON_VERSION
+    value: "3.11.11"
     sync: false
   region: frankfurt
   buildCommand: pip install --upgrade pip && pip install -r requirements.txt
