@@ -42,7 +42,7 @@ scipy
 seaborn==0.13.2
 six==1.17.0
 statsmodels==0.14.4
-sympy==1.12.1
+sympy==1.11.1
 threadpoolctl==3.6.0
 torch==2.5.1
 torchaudio==2.5.1
