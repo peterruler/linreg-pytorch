@@ -38,7 +38,7 @@ pytz==2025.2
 PyYAML==6.0.2
 requests==2.32.3
 scikit-learn==1.6.1
-scipy==1.15.2
+scipy
 seaborn==0.13.2
 six==1.17.0
 statsmodels==0.14.4
