@@ -81,6 +81,7 @@ PORT => 5000
 # Explanation of the code (in Deutsch / German)
 
 1. Importierte Bibliotheken
+
 Datenverarbeitung und Visualisierung:
 
 pandas, numpy zum Laden und Verarbeiten der Daten
@@ -106,7 +107,9 @@ MinMaxScaler zur Normalisierung der Eingabefeatures
 Metriken wie mean_absolute_error und mean_squared_error zur Evaluierung
 
 2. Datenvorbereitung und -vorverarbeitung
+
 2.1. Google Drive Mounting & Laden der Daten
+
 Drive Mounting:
 Falls das Skript in Google Colab ausgeführt wird, wird das Google Drive gemountet, um auf die CSV-Datei zuzugreifen.
 
@@ -121,6 +124,7 @@ Erste Datenanalyse:
 Mit df.head() wird ein erster Blick auf die Daten geworfen, und mittels sns.pairplot(df) werden Zusammenhänge zwischen den Variablen visualisiert.
 
 2.2. Aufteilen in Features und Zielvariable
+
 Features:
 Zwei Spalten (feature1, feature2) werden als Eingabefeatures verwendet.
 
@@ -145,6 +149,7 @@ Speichern des Skalierers:
 Der trainierte Scaler wird mit pickle gespeichert, sodass er später für Vorhersagen verwendet werden kann.
 
 3. Umwandlung in PyTorch-Tensoren und Erstellung des DataLoaders
+
 Tensoren:
 Die numpy-Arrays der Trainings- und Testdaten werden in PyTorch-Tensoren konvertiert, wobei auch die Zielvariablen in 2D-Tensoren umgeformt werden.
 
@@ -152,6 +157,7 @@ DataLoader:
 Ein TensorDataset wird erstellt und mit DataLoader in Mini-Batches (Batch-Größe = 32) eingeteilt, um das Training zu beschleunigen und stabiler zu gestalten.
 
 4. Modellarchitektur in PyTorch
+
 Das Modell wird als nn.Sequential definiert:
 
 Eingabeschicht:
