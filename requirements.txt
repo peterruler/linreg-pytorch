@@ -1,5 +1,5 @@
 blinker==1.9.0
-Brotli @ file:///Users/runner/miniforge3/conda-bld/brotli-split_1725267563793/work
+Brotli==1.1.0
 certifi @ file:///home/conda/feedstock_root/build_artifacts/certifi_1739515848642/work/certifi
 cffi @ file:///Users/runner/miniforge3/conda-bld/cffi_1725560551097/work
 charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1735929714516/work
