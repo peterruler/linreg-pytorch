@@ -1,6 +1,10 @@
 # linreg-pytorch
 Linear Regression with pytorch with numerical scalar target value
 
+# demo
+
+- URL: https://linreg-pytorch.onrender.com
+
 # create a environment
 
 ```
