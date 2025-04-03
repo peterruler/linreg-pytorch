@@ -10,7 +10,7 @@ filelock==3.18.0
 Flask==3.1.0
 Flask-WTF==1.2.2
 fonttools==4.57.0
-gmpy2==1.17
+gmpy2==2.2.1
 h2==4.2.0
 hpack==4.1.0
 hyperframe==6.1.0
