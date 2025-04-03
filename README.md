@@ -2,29 +2,29 @@
 
 - Linear Regression with pytorch with numerical scalar target value
 
-# demo
+# Demo
 
 - URL: https://linreg-pytorch.onrender.com
 
-# create a environment
+# Create a torch environment
 
 ```
 conda create --name torch31111 python=3.11.11
 ```
 
-# activate the environment
+# Activate the environment
 
 ```
 conda activate torch31111
 ```
 
-# install dependencies
+# Install dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-# install dependencies manually (optional)
+# Install dependencies manually (optional)
 
 ```
 conda install -y flask
@@ -43,35 +43,36 @@ conda install -y pytorch torchvision torchaudio cpuonly -c pytorch
 conda install -y sklearn
 ```
 
-# run flask server
+# Run Flask Server
 
 ```
 python app.py
 ```
 
-# call in a webbrowser
+# Call Webapplication in a Webbrowser
 
 ```
 http://localhost:5000
 ```
 
-# deploying the Application on Render.com
+# Deploying the Application on Render.com
 
 1. Fork this repository on GitHub.
 2. Connect the GitHub repository to Render.com (sign in with your GitHub account).
 3. Choose the free plan (0$) and the type "Web Service".
 4. Build the application on Render.com:
+
 ```
 pip install --upgrade pip && pip install -r requirements.txt
 ```
 
-# set Start Command on Render.com
+# Set Start Command on Render.com
 
 ```
 python app.py
 ```
 
-# set Environment Variables on Render.com
+# Set Environment Variables to Render.com
 
 ```
 PYTHON_VERSION => 3.11.11
