@@ -55,7 +55,7 @@ python app.py
 http://localhost:5000
 ```
 
-# Deploying the Application on Render.com
+# Deploying the Application to Render.com
 
 1. Fork this repository on GitHub.
 2. Connect the GitHub repository to Render.com (sign in with your GitHub account).
@@ -72,7 +72,7 @@ pip install --upgrade pip && pip install -r requirements.txt
 python app.py
 ```
 
-# Set Environment Variables to Render.com
+# Set Environment Variables on Render.com
 
 ```
 PYTHON_VERSION => 3.11.11
