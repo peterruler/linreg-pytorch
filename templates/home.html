@@ -1,13 +1,28 @@
-<h1>FLASK APP RUNNING</h1>
-<h2>Please enter your features below:</h2>
-<form  method="POST">
-    {# This hidden_tag is a CSRF security feature. #}
-    {{ form.hidden_tag() }}
-    {{ form.feat1.label }} {{form.feat1}}
-    <br>
-    {{ form.feat2.label}} {{form.feat2}}
-    <br>
-    {{ form.submit() }}
-</form>
-[[998,1000]]
-array([[419.67465]], dtype=float32)
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linreg PyTorch - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-4">
+    <h1 class="mb-3">FLASK APP RUNNING</h1>
+    <h2 class="mb-4">Please enter your features below:</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.feat1.label(class="form-label") }}
+            {{ form.feat1(class="form-control", required="required") }}
+        </div>
+        <div class="mb-3">
+            {{ form.feat2.label(class="form-label") }}
+            {{ form.feat2(class="form-control", required="required") }}
+        </div>
+        <button type="submit" class="btn btn-primary">{{ form.submit.label.text }}</button>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
