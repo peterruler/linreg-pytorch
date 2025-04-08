@@ -5,8 +5,12 @@
 # Demo
 
 - URL: https://linreg-pytorch.onrender.com
+  
+# Install Miniconda
 
-# Create a torch environment
+- Download and install Miniconda from the website: [Download Miniconda](https://docs.anaconda.com/miniconda/)
+
+# Create a conda - torch environment
 
 ```
 conda create --name torch31111 python=3.11.11
