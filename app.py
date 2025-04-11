@@ -24,10 +24,8 @@ def return_prediction(model,scaler,sample_json):
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecretkey'
 
-# flower_model = load_model("my_model.h5")
-
 # To load the model later, define the same architecture and load the state dictionary
-flower_model = nn.Sequential(
+gem_model = nn.Sequential(
     nn.Linear(2, 4),
     nn.ReLU(),
     nn.Linear(4, 4),
@@ -36,12 +34,12 @@ flower_model = nn.Sequential(
     nn.ReLU(),
     nn.Linear(4, 1)
 )
-flower_model.load_state_dict(torch.load('model.pth', weights_only=True))
-flower_model.eval()
+gem_model.load_state_dict(torch.load('model.pth', weights_only=True))
+gem_model.eval()
 
 scaler = pickle.load(open('scaler.sav', 'rb'))
 
-class FlowerForm(FlaskForm):
+class GemForm(FlaskForm):
     feat1 = StringField('Feature 1')
     feat2 = StringField('Feature 2')
 
@@ -50,7 +48,7 @@ class FlowerForm(FlaskForm):
 @app.route('/', methods=['GET', 'POST'])
 def index():
 
-    form = FlowerForm()
+    form = GemForm()
     if form.validate_on_submit():
 
         session['feat1'] = form.feat1.data
@@ -68,10 +66,10 @@ def prediction():
     content['feat1'] = float(session['feat1'])
     content['feat2'] = float(session['feat2'])
 
-    results = return_prediction(model=flower_model,scaler=scaler,sample_json=content)
-    gerundeter_wert = round(results * 20) / 20
-    res = round(gerundeter_wert, 2)
-    return render_template('prediction.html',results=res)
+    results = return_prediction(model=gem_model,scaler=scaler,sample_json=content)
+    res = round(results * 20) / 20  # Rundung auf 5 Cent
+    formatted_res = format(res, '.2f')  # Formatierung auf zwei Nachkommastellen
+    return render_template('prediction.html',results=formatted_res)
 
 
 if __name__ == '__main__':
