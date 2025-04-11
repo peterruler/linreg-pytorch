@@ -57,7 +57,7 @@ python app.py
 # Call Webapplication in a Webbrowser (locally)
 
 ```
-http://localhost:5000 or when using gunicorn -> http://localhost:8000
+http://localhost:5000 or when using gunicorn -> http://localhost:5000 (standard is 8000)
 ```
 
 # Call Webapplication in a Webbrowser (deployed)
@@ -77,22 +77,22 @@ https://linreg-pytorch.onrender.com
 pip install --upgrade pip && pip install -r requirements.txt
 ```
 
-# Set Start Command on Render.com locally (optional)
+# Set Start Command locally (optional)
 ```
-python app.py (Port 5000)
+python app.py
 ```
 
 # Set Start Command on Render.com 
 
 ```
-gunicorn app:app (Port 8000)
+gunicorn -b 0.0.0.0:5000 app:app
 ```
 
 # Set Environment Variables on Render.com
 
 ```
 PYTHON_VERSION => 3.11.11
-PORT => 8000
+PORT => 5000
 ```
 
 # Explanation of the code (in Deutsch / German)
