@@ -48,7 +48,7 @@ conda install -y sklearn
 conda install -y gunicorn
 ```
 
-# Run Flask Server (for testing)
+# Run Flask Server (locally for testing)
 
 ```
 python app.py
@@ -75,11 +75,6 @@ https://linreg-pytorch.onrender.com
 
 ```
 pip install --upgrade pip && pip install -r requirements.txt
-```
-
-# Set Start Command locally (optional)
-```
-python app.py
 ```
 
 # Set Start Command on Render.com 
