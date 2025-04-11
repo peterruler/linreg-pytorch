@@ -9,6 +9,7 @@ services:
   plan: free
   envVars:
   - key: PORT
+    value: "8000"
     sync: false
   - key: PYTHON_VERSION
     value: "3.11.11"

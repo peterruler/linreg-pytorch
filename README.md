@@ -45,18 +45,25 @@ conda install -y matplotlib
 conda install -y pickle
 conda install -y pytorch torchvision torchaudio cpuonly -c pytorch
 conda install -y sklearn
+conda install -y gunicorn
 ```
 
-# Run Flask Server
+# Run Flask Server (for testing)
 
 ```
 python app.py
 ```
 
-# Call Webapplication in a Webbrowser
+# Call Webapplication in a Webbrowser (locally)
 
 ```
-http://localhost:5000
+http://localhost:5000 or when using gunicorn -> http://localhost:8000
+```
+
+# Call Webapplication in a Webbrowser (deployed)
+
+```
+https://linreg-pytorch.onrender.com
 ```
 
 # Deploying the Application to Render.com
@@ -70,17 +77,22 @@ http://localhost:5000
 pip install --upgrade pip && pip install -r requirements.txt
 ```
 
-# Set Start Command on Render.com
+# Set Start Command on Render.com locally (optional)
+```
+python app.py (Port 5000)
+```
+
+# Set Start Command on Render.com 
 
 ```
-python app.py
+gunicorn app:app (Port 8000)
 ```
 
 # Set Environment Variables on Render.com
 
 ```
 PYTHON_VERSION => 3.11.11
-PORT => 5000
+PORT => 8000
 ```
 
 # Explanation of the code (in Deutsch / German)
